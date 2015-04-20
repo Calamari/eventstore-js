@@ -11,9 +11,9 @@ describe('EventPostgresStore', function() {
     database: 'event_sourcing_test'
   };
   var store,
-      event1 = { name: 'MyEvent1', aggregateId: '12345678-1234-5678-90ab-1234567890ab', data: { foo: 42 }, createdAt: new Date() },
-      event2 = { name: 'MyEvent2', aggregateId: '22345678-1234-5678-90ab-1234567890ab', data: { foo: 'bar' }, createdAt: new Date() },
-      event3 = { name: 'MyEvent3', aggregateId: '12345678-1234-5678-90ab-1234567890ab', data: {}, createdAt: new Date() };
+      event1 = { name: 'MyEvent1', aggregateId: '12345678-1234-5678-90ab-1234567890ab', data: { foo: 42 }, createdAt: new Date(1) },
+      event2 = { name: 'MyEvent2', aggregateId: '22345678-1234-5678-90ab-1234567890ab', data: { foo: 'bar' }, createdAt: new Date(2) },
+      event3 = { name: 'MyEvent3', aggregateId: '12345678-1234-5678-90ab-1234567890ab', data: {}, createdAt: new Date(3) };
 
   // Clean DB before test
   beforeEach(function(done) {
